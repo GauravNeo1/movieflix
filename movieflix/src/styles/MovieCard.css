@@ -1,0 +1,28 @@
+.movie-card {
+  position: relative;
+  width: 100%;
+  max-width: 250px;
+  margin: 10px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.movie-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+.movie-card .movie-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(43, 144, 190, 0.7);
+  color: #fff;
+  padding: 10px 0px;
+  text-align: center;
+}
+

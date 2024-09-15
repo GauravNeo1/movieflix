@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import MovieList from "../components/MovieFlix/MovieList";
 import GenreFilter from "../components/MovieFlix/GenreFilter";
 
 const MovieFlix = () => {
   return (
-    <div className="container">
+    <div>
       <h1>MOVIEFLIX</h1>
       <GenreFilter/>
       <MovieList />
