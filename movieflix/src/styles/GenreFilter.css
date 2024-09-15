@@ -1,0 +1,32 @@
+.genre-filter {
+  display: flex;
+  gap: 10px;
+  margin: 0 auto;
+  width: 90%;
+  padding-top: 20px;
+  font-size: 1rem;
+  overflow-x: auto; 
+  white-space: nowrap;
+  padding: 10px; 
+}
+
+.genre-item {
+  padding: 2px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid #3f4c50;
+  background-color: #3f4c50;
+  color: rgb(214, 200, 200);
+ }
+
+.genre-item.selected {
+  color: white;
+  border: 1px solid rgb(117, 6, 6);
+  background-color: rgb(117, 6, 6);
+}
+
+.genre-item:hover {
+  border: 1px solid white;
+}
+
+

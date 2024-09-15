@@ -4,7 +4,7 @@ import MovieCard from "./MovieCard";
 import "../../styles/MovieList.css";
 import { getMovieListQuery } from "../../utils/utils";
 
-const MovieList = () => {
+const MovieList = ({ selectedGenres }) => {
   const [moviesByYear, setMoviesByYear] = useState({});
   const [currentYear, setCurrentYear] = useState(2012);
   const [loading, setLoading] = useState(false);
@@ -12,7 +12,7 @@ const MovieList = () => {
   const fetchMovies = async (year) => {
     setLoading(true);
     try {
-      const res = await axios.get(getMovieListQuery(year));
+      const res = await axios.get(getMovieListQuery(year,selectedGenres));
       const movieList = res.data.results;
 
       setMoviesByYear((prevMovies) => ({
@@ -43,7 +43,7 @@ const MovieList = () => {
 
   useEffect(() => {
     fetchMovies(currentYear);
-  }, [currentYear]);
+  }, [currentYear,selectedGenres]);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
