@@ -1,20 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "../../styles/GenreFilter.css";
-import { GET_GENRES } from "../../constants/constants";
-import axios from "axios";
+import { DataContext } from "../../DataContext/DataContext";
 
 const GenreFilter = ({ onGenreChange }) => {
-  const [genres, setGenres] = useState([]);
+  const { genres } = useContext(DataContext);
   const [selectedGenres, setSelectedGenres] = useState([]);
- 
-  useEffect(() => {
-    const fetchGenres = async () => {
-      const res = await axios.get(GET_GENRES);
-      setGenres(res.data.genres);
-    };
-    fetchGenres();
-  }, []);
-
 
   const handleGenreClick = (genreId) => {
     if (selectedGenres.includes(genreId)) {
