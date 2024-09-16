@@ -9,7 +9,7 @@ const MovieFlix = () => {
   return (
     <div>
       <div class="logo-container">
-        <img src='/logo.png' alt="Logo" />
+        <img src={`${process.env.PUBLIC_URL}/logo.png`} alt="Logo" />
       </div>
 
       <GenreFilter
