@@ -11,6 +11,13 @@ const MovieList = ({ selectedGenres }) => {
   const [loading, setLoading] = useState(false);
 
   const fetchMovies = async (year) => {
+
+    const current = new Date().getFullYear();
+    if (year > current) {
+      console.warn(`Skipping fetch for future year ${year}`);
+      return;
+    }
+
     setLoading(true);
     try {
       const res = await axios.get(getMovieListQuery(year,selectedGenres));
