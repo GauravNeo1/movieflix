@@ -66,3 +66,27 @@
 .movie-overlay p:first-of-type {
   margin-top: 10px;
 }
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .movie-card h2 {
+    margin: 0;
+    font-size: 0.8rem;
+  }
+
+  .movie-card p {
+    margin: 4px 0 0;
+    font-size: 0.6rem;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .movie-card h2 {
+    margin: 0;
+    font-size: 0.7rem;
+  }
+
+  .movie-card p {
+    margin: 2px 0 0;
+    font-size: 0.5rem;
+  }
+}

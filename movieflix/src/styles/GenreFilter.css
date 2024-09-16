@@ -30,3 +30,15 @@
 }
 
 
+@media (min-width: 769px) and (max-width: 1024px) {
+  .genre-filter {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .genre-filter {
+    font-size: 0.8rem;
+  }
+}
+
