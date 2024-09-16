@@ -3,6 +3,7 @@ import axios from "axios";
 import MovieCard from "./MovieCard";
 import "../../styles/MovieList.css";
 import { getMovieListQuery } from "../../utils/utils";
+import NoMoviesMessage from '../NotAvailable/NoMoviesMessage';
 
 const MovieList = ({ selectedGenres }) => {
   const [moviesByYear, setMoviesByYear] = useState({});
@@ -58,11 +59,13 @@ const MovieList = ({ selectedGenres }) => {
           <div key={year}>
             <h2 className="movie-year">{year}</h2>
             <div className="movie-grid">
-              {
-                moviesByYear[year].map((movie) => (
-                  <MovieCard key={movie.id} movie={movie} />
-                ))
-            }
+            {moviesByYear[year].length ?    
+              moviesByYear[year].map((movie) => (
+              <MovieCard key={movie.id} movie={movie} />
+            ))
+          :
+          <NoMoviesMessage selectedGenres={selectedGenres} />
+          }
             </div>
           </div>
         ))}
