@@ -24,14 +24,14 @@ To run this project locally, follow these steps:
 
 3. **Install Dependencies**
 
-Ensure you have Node.js and npm installed. Then, install the project dependencies:
+   Ensure you have Node.js and npm installed. Then, install the project dependencies:
 
     ```bash
     npm install
 
 4. **Run the Development Server**
 
-Start the development server with:
+   Start the development server with:
 
     ```bash
     npm start
