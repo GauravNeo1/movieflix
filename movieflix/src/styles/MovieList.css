@@ -2,6 +2,7 @@
   padding-top: 20px;
   margin: 0 auto;
   width: 90%;
+  min-height: 50vw;
 }
 
 .movie-grid {
@@ -12,7 +13,7 @@
 }
 
 .movie-grid > * {
-  flex: 1 1 20%;
+  flex: 1 1 calc(20% - 20px);
 }
 
 .loading {
@@ -33,15 +34,24 @@
     font-size: 1.4rem;
   }
   .movie-grid > * {
-    flex: 1 1 25%;
+    flex: 1 1 calc(25% - 20px);
+  }
+  .movie-list {
+    min-height: 140vw;
   }
 }
 
 @media (min-width: 320px) and (max-width: 768px) {
   .movie-grid > * {
-    flex: 1 1 40%;
+    flex: 1 1 calc(40% - 20px);
   }
   .movie-year {
     font-size: 1rem;
+  }
+  .movie-list {
+    min-height: 150vw;
+  }
+  .movie-grid {
+    gap: 0px;
   }
 }
